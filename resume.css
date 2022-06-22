@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   height: 100vh;
   font-family: 'Roboto Mono', monospace;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
@@ -9,25 +10,6 @@ a:link {
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr 60px 1fr;
-  grid-template-rows: 100vh;
-  align-items: center
-}
-
-.header-logo {
-  text-align: right;
-  color: #231E27;
-  padding-right: 50px;
-  font-size: 40px
-}
-
-.header-vl {
-  border-left: 2px solid #231E27;
-  height: 50px;
-}
-
-.header-text {
-  font-weight: normal;
-  line-height: 0.7;
+  align-content: center;
+  line-height: 0.4;
 }
