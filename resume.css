@@ -1,7 +1,17 @@
+@font-face {
+font-family: 'Sofia-pro';
+src: url('assets/sofia/sofia-w01-light.woff2') format('woff2'),
+     url('assets/sofia/sofia-medium.woff2') format('woff2'),
+     url('assets/sofia/sofia-thin.woff2') format('woff2'),
+     url('assets/sofia/sofia-w01-bold.woff2') format('woff2'),
+     url('assets/sofia/sofia-bold.woff2') format('woff2'),
+     url('assets/sofia/sofia-extralight.woff2') format('woff2');
+}
+
 body {
   margin: 0;
   height: 100vh;
-  font-family: 'Roboto Mono', monospace;
+  font-family: Sofia-pro, sans-serif;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
@@ -9,7 +19,40 @@ a:link {
   color: #231E27;
 }
 
-.header {
-  align-content: center;
-  line-height: 0.4;
+.resume {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1em, 1fr)
+    [main-start] minmax(0, 56em) [main-end]
+    minmax(1em, 1fr) [full-end];
+  grid-gap: 1em;
+}
+
+.resume__description {
+  grid-column: main;
+  margin: 10px 0;
+  padding: 2em 0;
+}
+
+.resume__description-name {
+  font-size: 7vh;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.resume__description-title {
+  font-size: 4vh;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.resume__description-link {
+  font-size: 2vh;
+  margin: 10px 0;
+}
+
+.resume__projects {
+  grid-column: main;
+  font-size: 3vh;
+  padding: 2em 0;
 }
