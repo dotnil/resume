@@ -1,11 +1,31 @@
 @font-face {
-font-family: 'Sofia-pro';
-src: url('assets/sofia/sofia-w01-light.woff2') format('woff2'),
-     url('assets/sofia/sofia-medium.woff2') format('woff2'),
-     url('assets/sofia/sofia-thin.woff2') format('woff2'),
-     url('assets/sofia/sofia-w01-bold.woff2') format('woff2'),
-     url('assets/sofia/sofia-bold.woff2') format('woff2'),
-     url('assets/sofia/sofia-extralight.woff2') format('woff2');
+  font-family: 'Sofia-pro';
+  src: url('assets/sofia/sofia-extralight.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Sofia-pro';
+  src: url('assets/sofia/sofia-thin.woff2') format('woff2');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Sofia-pro';
+  src: url('assets/sofia/sofia-w01-light.woff2') format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Sofia-pro';
+  src: url('assets/sofia/sofia-medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Sofia-pro';
+  src: url('assets/sofia/sofia-w01-bold.woff2') format('woff2');
+  font-weight: 700;
 }
 
 body {
@@ -34,23 +54,23 @@ a:link {
 }
 
 .resume__description-name {
-  font-size: 7vh;
-  font-weight: normal;
-  margin: 10px 0;
+  font-size: 8vh;
+  font-weight: 100;
 }
 
 .resume__description-title {
-  font-size: 4vh;
-  font-weight: normal;
-  margin: 10px 0;
+  font-size: 3vh;
+  font-weight: 1000;
 }
 
 .resume__description-link {
-  font-size: 2vh;
-  margin-bottom: 10px;
+  font-size: 3vh;
+  font-weight: 300;
+  margin: 0;
 }
 
 .resume__projects {
+  font-weight: 700;
   grid-column: main;
   font-size: 3vh;
   padding: 2em 0;
