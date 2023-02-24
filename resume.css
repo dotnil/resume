@@ -30,8 +30,8 @@
 
 body {
   margin: 0;
-  height: 100vh;
   font-family: Sofia-pro, sans-serif;
+  min-height: 100vh;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
@@ -40,16 +40,13 @@ a:link {
 }
 
 .resume {
-  display: grid;
-  grid-template-columns:
-    [full-start] minmax(1em, 1fr)
-    [main-start] minmax(0, 56em) [main-end]
-    minmax(1em, 1fr) [full-end];
-  grid-gap: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw;
+  width: 80vw;
 }
 
 .resume__description {
-  grid-column: main;
   padding: 2em 0;
 }
 
@@ -74,4 +71,24 @@ a:link {
   grid-column: main;
   font-size: 3vh;
   padding: 2em 0;
+  width: 90%;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.resume__projects-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume__projects-img {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  margin-bottom: auto;
+  border-radius: 10%;
+}
+
+.resume__projects-market {
 }
