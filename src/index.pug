@@ -1,0 +1,29 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Resume
+  link(rel='stylesheet' href='resume.css')
+  link(rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>')
+
+.resume
+  .resume__contacts
+    h1.resume__contacts-name Kholopova Tatiana
+    h2.resume__contacts-title Frontend developer
+    p.resume__contacts-link
+      a(href='https://github.com/dotnil') github.com/dotnil
+    p.resume__contacts-link
+      a(href='mailto:tskh.work@gmail.com') ts.khol@gmail.com
+  .resume__projects
+    .resume__projects-item
+      a.resume__projects-link(href='https://dotnil.github.io/todo/')
+        span todo
+        img.resume__projects-img.resume__projects-todo(src='assets/img/todo-preview.png')
+    .resume__projects-item
+      a.resume__projects-link.resume__projects-exercism(href='https://exercism.org/profiles/dotnil/solutions?order=newest_first')
+        span exercism
+        img.resume__projects-img(src='assets/img/exercism-preview.png')
+    .resume__projects-item
+      a.resume__projects-link.resume__projects-b2b-market(href='https://github.com/ksevelyar/market-vue.git')
+        span b2b-market
+        img.resume__projects-img.resume__projects-b2b-market(src='assets/img/b2b-market-preview.png')
