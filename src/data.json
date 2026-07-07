@@ -1,0 +1,24 @@
+{
+  "name": "Kholopova Tatiana",
+  "title": "Frontend Developer",
+  "email": "tskh.work@gmail.com",
+  "github": "dotnil",
+  "summary": "I am a front-end developer. I write in Vue2/Vue3 and VanillaJS: I cover my code with jest/vitest tests. Looking for a company with a possibility to learn and exchange experiences. I prefer to use functional programming for my own projects, I'm willing to learn the technologies of the team. Agile is important to me.",
+  "projects": [
+    {
+      "name": "todo",
+      "url": "https://dotnil.github.io/todo/",
+      "image": "todo-preview.png"
+    },
+    {
+      "name": "exercism",
+      "url": "https://exercism.org/profiles/dotnil/solutions?order=newest_first",
+      "image": "exercism-preview.png"
+    },
+    {
+      "name": "b2b-market",
+      "url": "https://github.com/ksevelyar/market-vue.git",
+      "image": "b2b-market-preview.png"
+    }
+  ]
+}
