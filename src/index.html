@@ -1,13 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kholopova Tatiana — Frontend Developer</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <div id="app"></div>
-  <script type="module" src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kholopova Tatiana — JavaScript Developer</title>
+
+    <meta
+    name="description"
+    content="JavaScript Developer. Vue 3, Node.js, Hono, PostgreSQL."
+    >
+
+    <meta property="og:title" content="Kholopova Tatiana — JavaScript Developer">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+
+    <body>
+
+      <div class="resume">
+
+        <header class="resume__contacts">
+
+          <h1 class="resume__contacts-name">
+            Kholopova Tatiana
+          </h1>
+
+          <h2 class="resume__contacts-title">
+            JavaScript Developer
+          </h2>
+
+          <p class="resume__contacts-link">
+          <img
+          class="resume__contacts-icon"
+          src="./assets/icons/logo-github.svg"
+          alt=""
+          >
+
+          <a
+            href="https://github.com/dotnil"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            github.com/dotnil
+          </a>
+          </p>
+
+          <p class="resume__contacts-link">
+          <img
+          class="resume__contacts-icon"
+          src="./assets/icons/envelope.svg"
+          alt=""
+          >
+
+          <a href="mailto:tskh.work@gmail.com">
+            tskh.work@gmail.com
+          </a>
+          </p>
+
+        </header>
+
+        <section class="resume__featured">
+
+          <h2 class="resume__featured-title">
+            Featured Project
+          </h2>
+
+          <div class="resume__featured-content">
+
+            <img
+            class="resume__featured-image"
+            src="./assets/img/hibi-preview.png"
+            alt="Hibi preview"
+            loading="lazy"
+            >
+
+            <div class="resume__featured-info">
+
+              <h3 class="resume__featured-name">
+                Hibi
+              </h3>
+
+            <p class="resume__featured-description">
+            Full-stack habit tracking application built from scratch.
+            Users can create habits and track their weekly progress on a single page.
+            </p>
+
+            <h4 class="resume__featured-subtitle">
+              Key Features
+            </h4>
+
+            <ul class="resume__featured-stack">
+              <li>Vue 3 SPA</li>
+              <li>REST API with Hono</li>
+              <li>PostgreSQL without ORM</li>
+              <li>JWT authentication</li>
+              <li>Password hashing with bcrypt</li>
+              <li>SQL queries</li>
+              <li>dbmate migrations</li>
+              <li>VPS deployment</li>
+              <li>NixOS configuration</li>
+            </ul>
+
+            <h4 class="resume__featured-subtitle">
+              Architecture
+            </h4>
+
+            <p class="resume__featured-description">
+            Frontend and backend are maintained in separate repositories.
+            The application is organized into independent modules for users,
+            habits and metrics. Each module has its own API layer and SQL queries.
+            </p>
+
+            <div class="resume__featured-links">
+
+              <a
+                href="https://hibi.example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                Live Demo
+              </a>
+
+                <a
+                  href="https://github.com/your-name/hibi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  Source Code
+                </a>
+
+            </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="resume__projects">
+
+          <h2 class="resume__projects-title">
+            Other Projects
+          </h2>
+
+          <article class="resume__projects-item">
+
+            <h3 class="resume__projects-name">
+              Market Vue
+            </h3>
+
+            <p class="resume__projects-description">
+            Team project.
+            </p>
+
+            <a
+              class="resume__projects-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              GitHub
+            </a>
+
+          </article>
+
+          <article class="resume__projects-item">
+
+            <h3 class="resume__projects-name">
+              RSS Aggregator
+            </h3>
+
+            <p class="resume__projects-description">
+            RSS reader with feeds management.
+            </p>
+
+            <a
+              class="resume__projects-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              GitHub
+            </a>
+
+          </article>
+
+          <article class="resume__projects-item">
+
+            <h3 class="resume__projects-name">
+              Difference Calculator
+            </h3>
+
+            <p class="resume__projects-description">
+            CLI utility for comparing configuration files.
+            </p>
+
+            <a
+              class="resume__projects-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              GitHub
+            </a>
+
+          </article>
+
+          <article class="resume__projects-item">
+
+            <h3 class="resume__projects-name">
+              Calculus Made Easy
+            </h3>
+
+            <p class="resume__projects-description">
+            Russian translation of the classic mathematics book.
+            </p>
+
+            <a
+              class="resume__projects-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              GitHub
+            </a>
+
+          </article>
+
+        </section>
+
+      </div>
+
+    </body>
 </html>

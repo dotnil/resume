@@ -3,21 +3,25 @@
   src: url('assets/sofia/sofia-extralight.woff2') format('woff2');
   font-weight: 100;
 }
+
 @font-face {
   font-family: 'Sofia-pro';
   src: url('assets/sofia/sofia-thin.woff2') format('woff2');
   font-weight: 200;
 }
+
 @font-face {
   font-family: 'Sofia-pro';
   src: url('assets/sofia/sofia-w01-light.woff2') format('woff2');
   font-weight: 300;
 }
+
 @font-face {
   font-family: 'Sofia-pro';
   src: url('assets/sofia/sofia-medium.woff2') format('woff2');
   font-weight: 500;
 }
+
 @font-face {
   font-family: 'Sofia-pro';
   src: url('assets/sofia/sofia-w01-bold.woff2') format('woff2');
@@ -33,7 +37,7 @@
 body {
   font-family: 'Sofia-pro', sans-serif;
   min-height: 100vh;
-  background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background: linear-gradient(180deg, #f7f8fa 0%, #eef2f7 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,53 +104,177 @@ body {
   border-bottom: 1px solid rgba(35, 30, 39, 0.1);
 }
 
-.resume__projects {
-  padding: 20px 0;
+/* Featured project */
+
+.resume__featured {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(35, 30, 39, .1);
+}
+
+.resume__featured-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: .6;
+}
+
+.resume__featured-content {
   display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 32px;
+}
+
+.resume__featured-image {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.resume__featured-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.resume__featured-description {
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.resume__featured-stack {
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume__featured-stack li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(239, 241, 245);
+  font-size: .95rem;
+}
+
+.resume__featured-links {
+  display: flex;
   gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.resume__featured-links a {
+  color: #231E27;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.resume__featured-links a:hover {
+  opacity: .6;
+}
+
+.resume__projects {
+  padding-top: 32px;
+}
+
+.resume__projects-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 20px;
+  opacity: .6;
 }
 
 .resume__projects-item {
-  display: flex;
-  flex-direction: column;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(35,30,39,.08);
+}
+
+.resume__projects-item:last-child {
+  border-bottom: none;
+}
+
+.resume__projects-name {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.resume__projects-description {
+  font-weight: 300;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .resume__projects-link {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-weight: 700;
-  font-size: clamp(1rem, 2vw, 1.2rem);
   text-decoration: none;
+  font-weight: 700;
   color: #231E27;
-  transition: transform 0.3s ease;
 }
 
 .resume__projects-link:hover {
-  transform: translateY(-4px);
+  opacity: .6;
 }
 
-.resume__projects-img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: box-shadow 0.3s ease;
+/* Анимация появления */
+.resume__contacts,
+.resume__summary,
+.resume__projects {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
 }
 
-.resume__projects-link:hover .resume__projects-img {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+.resume__contacts {
+  animation-delay: 0.1s;
 }
 
-@media (max-width: 600px) {
-  .resume {
-    padding: 20px;
+.resume__summary {
+  animation-delay: 0.3s;
+}
+
+.resume__projects {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .resume__projects {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .resume {
+    padding: 24px;
+  }
+
+  .resume__featured-content {
     grid-template-columns: 1fr;
-    max-width: 300px;
-    margin: 0 auto;
+  }
+
+  .resume__featured-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+  .resume {
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    background: white !important;
+  }
+  .resume__projects-link:hover {
+    transform: none !important;
   }
 }

@@ -6,7 +6,6 @@ yarn-error.log*
 
 # Build
 dist/
-docs/
 build/
 .DS_Store
 
@@ -20,6 +19,25 @@ build/
 .idea/
 *.swp
 *.swo
+*.swn
+*.swm
 
 # Nix
 result/
+.direnv/
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Temporary
+*.tmp
+*.temp
+.cache/
+
+# Vite
+*.tsbuildinfo

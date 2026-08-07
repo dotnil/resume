@@ -4,11 +4,14 @@ export default defineConfig({
   root: 'src',
   base: './',
   build: {
-    outDir: '../docs',
+    outDir: '../dist',
     emptyOutDir: true,
   },
   server: {
     open: true,
-    port: 3000,
+    port: 5173,
+  },
+  preview: {
+    port: 4173,
   },
 })
