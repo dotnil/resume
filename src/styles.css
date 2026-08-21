@@ -70,6 +70,15 @@ body {
   margin-bottom: 16px;
 }
 
+.resume__contacts-location {
+  width: fit-content;
+  margin: 12px 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(239, 241, 245);
+  font-size: .95rem;
+}
+
 .resume__contacts-link {
   display: flex;
   align-items: center;
@@ -87,7 +96,6 @@ body {
 
 .resume__contacts-link a {
   color: #231E27;
-  text-decoration: none;
   transition: opacity 0.3s;
 }
 
@@ -128,6 +136,7 @@ body {
 
 .resume__featured-image {
   width: 100%;
+  border: 1px solid rgba(35, 30, 39, .1);
   border-radius: 14px;
   display: block;
 }
@@ -141,6 +150,10 @@ body {
 .resume__featured-description {
   font-weight: 300;
   line-height: 1.8;
+}
+
+.resume__featured-subtitle {
+  margin-top: 20px;
 }
 
 .resume__featured-stack {
@@ -167,7 +180,6 @@ body {
 
 .resume__featured-links a {
   color: #231E27;
-  text-decoration: none;
   font-weight: 700;
 }
 
@@ -208,9 +220,24 @@ body {
 }
 
 .resume__projects-link {
-  text-decoration: none;
   font-weight: 700;
   color: #231E27;
+}
+
+.resume a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+
+.resume a[target="_blank"]::after {
+  content: " ↗";
+  font-size: .6em;
+  opacity: .5;
+}
+
+.resume a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .resume__projects-link:hover {

@@ -31,6 +31,10 @@
             JavaScript Developer
           </h2>
 
+          <p class="resume__contacts-location">
+            Москва · удалённо / гибрид · без переезда
+          </p>
+
           <p class="resume__contacts-link">
           <img
           class="resume__contacts-icon"
@@ -59,20 +63,30 @@
           </a>
           </p>
 
+          <p class="resume__contacts-link">
+          <a
+            href="https://t.me/satanyusha"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            @satanyusha
+          </a>
+          </p>
+
         </header>
 
         <section class="resume__featured">
 
           <h2 class="resume__featured-title">
-            Featured Project
+            Ключевой проект
           </h2>
 
           <div class="resume__featured-content">
 
             <img
             class="resume__featured-image"
-            src="./assets/img/hibi-preview.png"
-            alt="Hibi preview"
+            src="./assets/img/hibi-preview-mob.png"
+            alt="Превью приложения Hibi"
             loading="lazy"
             >
 
@@ -83,53 +97,62 @@
               </h3>
 
             <p class="resume__featured-description">
-            Full-stack habit tracking application built from scratch.
-            Users can create habits and track their weekly progress on a single page.
+            Fullstack-приложение для отслеживания привычек. Пользователь создаёт
+            привычки, задаёт цели и отмечает выполнение; прогресс по каждой привычке
+            виден прямо в общем списке.
             </p>
-
-            <h4 class="resume__featured-subtitle">
-              Key Features
-            </h4>
 
             <ul class="resume__featured-stack">
-              <li>Vue 3 SPA</li>
-              <li>REST API with Hono</li>
-              <li>PostgreSQL without ORM</li>
-              <li>JWT authentication</li>
-              <li>Password hashing with bcrypt</li>
-              <li>SQL queries</li>
-              <li>dbmate migrations</li>
-              <li>VPS deployment</li>
-              <li>NixOS configuration</li>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Vue 3</li>
+              <li>Hono</li>
+              <li>PostgreSQL</li>
+              <li>REST API</li>
+              <li>raw SQL</li>
+              <li>dbmate</li>
+              <li>NixOS</li>
             </ul>
 
+            <p class="resume__featured-description">
+            Hibi — самостоятельный fullstack-проект: Vue 3 frontend, REST API на Hono, PostgreSQL без ORM, авторизация через JWT в HttpOnly cookie и production-деплой на VPS с NixOS.
+            </p>
+
             <h4 class="resume__featured-subtitle">
-              Architecture
+              Технические решения
             </h4>
 
-            <p class="resume__featured-description">
-            Frontend and backend are maintained in separate repositories.
-            The application is organized into independent modules for users,
-            habits and metrics. Each module has its own API layer and SQL queries.
-            </p>
+            <ul class="resume__featured-description">
+              <li>frontend и backend разделены на независимые приложения и взаимодействуют через REST API;</li>
+              <li>PostgreSQL используется без ORM, SQL сосредоточен в backend-модулях;</li>
+              <li>окружение и production-сборка воспроизводимы с помощью Nix flakes.</li>
+            </ul>
 
             <div class="resume__featured-links">
 
               <a
-                href="https://hibi.example.com"
+                href="https://hibiflow.ru/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-                Live Demo
+                Демо
               </a>
 
-                <a
-                  href="https://github.com/your-name/hibi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  Source Code
-                </a>
+              <a
+                href="https://github.com/dotnil/hibi-vue"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                Frontend
+              </a>
+
+              <a
+                href="https://github.com/dotnil/hibi-hono"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                Backend
+              </a>
 
             </div>
 
@@ -142,8 +165,33 @@
         <section class="resume__projects">
 
           <h2 class="resume__projects-title">
-            Other Projects
+            Другие проекты
           </h2>
+
+          <article class="resume__projects-item">
+
+            <h3 class="resume__projects-name">
+              Todo Vue
+            </h3>
+
+            <p class="resume__projects-description">
+            SPA для управления задачами. Самостоятельный frontend-проект на Vue 3.
+            </p>
+
+            <p class="resume__projects-stack">
+            Vue 3, Pinia, Vue Router, Vite
+            </p>
+
+            <a
+              class="resume__projects-link"
+              href="https://github.com/dotnil/todo-vue"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              GitHub
+            </a>
+
+          </article>
 
           <article class="resume__projects-item">
 
@@ -152,12 +200,16 @@
             </h3>
 
             <p class="resume__projects-description">
-            Team project.
+            B2B-платформа с ролями vendor и retailer. Работала над функциональностью vendor в команде из трёх разработчиков.
+            </p>
+
+            <p class="resume__projects-workflow">
+            Командная разработка · Git · feature branches · pull requests · code review
             </p>
 
             <a
               class="resume__projects-link"
-              href="#"
+              href="https://github.com/rusty-cluster/market-vue"
               target="_blank"
               rel="noopener noreferrer"
               >
@@ -173,12 +225,20 @@
             </h3>
 
             <p class="resume__projects-description">
-            RSS reader with feeds management.
+            SPA для чтения и автоматического обновления RSS-лент.
+            </p>
+
+            <p class="resume__projects-stack">
+            JavaScript, Axios, i18next, Yup, Bootstrap, Vite.
+            </p>
+
+            <p class="resume__projects-description">
+            Учебный проект Hexlet.
             </p>
 
             <a
               class="resume__projects-link"
-              href="#"
+              href="https://github.com/dotnil/frontend-project-11"
               target="_blank"
               rel="noopener noreferrer"
               >
@@ -194,12 +254,20 @@
             </h3>
 
             <p class="resume__projects-description">
-            CLI utility for comparing configuration files.
+            CLI-приложение для сравнения JSON и YAML файлов.
+            </p>
+
+            <p class="resume__projects-stack">
+            Node.js.
+            </p>
+
+            <p class="resume__projects-description">
+            Учебный проект Hexlet.
             </p>
 
             <a
               class="resume__projects-link"
-              href="#"
+              href="https://github.com/dotnil/frontend-project-46"
               target="_blank"
               rel="noopener noreferrer"
               >
@@ -208,6 +276,14 @@
 
           </article>
 
+        </section>
+
+        <section class="resume__projects">
+
+          <h2 class="resume__projects-title">
+            Open Source
+          </h2>
+
           <article class="resume__projects-item">
 
             <h3 class="resume__projects-name">
@@ -215,12 +291,12 @@
             </h3>
 
             <p class="resume__projects-description">
-            Russian translation of the classic mathematics book.
+            Русский перевод книги Silvanus P. Thompson "Calculus Made Easy" в Markdown с математическими формулами.
             </p>
 
             <a
               class="resume__projects-link"
-              href="#"
+              href="https://github.com/dotnil/calculus-made-easy-ru"
               target="_blank"
               rel="noopener noreferrer"
               >
