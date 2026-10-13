@@ -23,7 +23,7 @@ build/
 *.swm
 
 # Nix
-result/
+result
 .direnv/
 
 # OS
