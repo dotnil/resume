@@ -231,9 +231,13 @@ body {
 }
 
 .resume a[target="_blank"]::after {
-  content: " ↗";
-  font-size: .6em;
+  content: url('./assets/icons/link.svg');
+  display: inline-block;
+  width: .8em;
+  height: .8em;
+  margin-left: .35em;
   opacity: .5;
+  vertical-align: -.05em;
 }
 
 .resume a:hover {
