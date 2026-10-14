@@ -64,6 +64,7 @@ html.js .resume.is-ready {
 }
 
 .resume__contacts {
+  position: relative;
   padding: 20px 0;
   border-bottom: 1px solid rgba(35, 30, 39, .1);
 }
@@ -111,6 +112,78 @@ html.js .resume.is-ready {
 
 .resume__contacts-link a:hover {
   opacity: 0.6;
+}
+
+.resume__copy-button,
+.resume__print-button {
+  border: 0;
+  color: #231E27;
+  cursor: pointer;
+  font: inherit;
+}
+
+.resume__copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border-radius: 6px;
+}
+
+.resume__copy-button svg,
+.resume__print-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.resume__copy-button:hover,
+.resume__copy-button.is-copied {
+  background: rgb(239, 241, 245);
+}
+
+.resume__copy-status {
+  opacity: 0;
+  font-size: .8rem;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.resume__copy-status.is-visible {
+  opacity: .7;
+}
+
+.resume__print-button {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgb(239, 241, 245);
+  color: rgba(35, 30, 39, .4);
+  font-size: .7rem;
+  transform: translateY(-50%);
+}
+
+.resume__print-button:hover {
+  background: rgb(224, 228, 235);
+  color: #231E27;
+}
+
+.resume__copy-button:focus-visible,
+.resume__print-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
 }
 
 .resume__summary {
@@ -328,6 +401,12 @@ html.js .resume.is-ready .resume__projects {
     padding: 24px;
   }
 
+  .resume__print-button {
+    top: 20px;
+    right: 0;
+    transform: none;
+  }
+
   .resume__featured-content {
     grid-template-columns: 1fr;
   }
@@ -350,5 +429,9 @@ html.js .resume.is-ready .resume__projects {
   }
   .resume__projects-link:hover {
     transform: none !important;
+  }
+  .resume__copy-button,
+  .resume__print-button {
+    display: none !important;
   }
 }

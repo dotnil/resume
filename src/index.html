@@ -24,6 +24,16 @@
 
         <header class="resume__contacts">
 
+          <button
+            class="resume__print-button"
+            type="button"
+            >
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z" />
+            </svg>
+            Печать / PDF
+          </button>
+
           <h1 class="resume__contacts-name">
             Kholopova Tatiana
           </h1>
@@ -62,6 +72,19 @@
           <a href="mailto:tskh.work@gmail.com">
             tskh.work@gmail.com
           </a>
+
+          <button
+            class="resume__copy-button"
+            type="button"
+            aria-label="Скопировать email"
+            title="Скопировать email"
+            >
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect x="9" y="9" width="11" height="11" rx="1" />
+              <path d="M15 9V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h4" />
+            </svg>
+          </button>
+          <span class="resume__copy-status" aria-live="polite"></span>
           </p>
 
           <p class="resume__contacts-link">
@@ -344,10 +367,35 @@
         const pageLoaded = new Promise((resolve) => window.addEventListener('load', resolve, { once: true }))
         const fontsLoaded = document.fonts?.ready ?? Promise.resolve()
         const timeout = new Promise((resolve) => setTimeout(resolve, 1500))
+        const copyButton = document.querySelector('.resume__copy-button')
+        const copyStatus = document.querySelector('.resume__copy-status')
+        const printButton = document.querySelector('.resume__print-button')
+        let copyStatusTimeout
 
         Promise.race([Promise.all([pageLoaded, fontsLoaded]), timeout]).then(() => {
           resume.classList.add('is-ready')
         })
+
+        copyButton.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText('tskh.work@gmail.com')
+            copyButton.classList.add('is-copied')
+            copyStatus.textContent = 'Скопировано =)'
+            copyStatus.classList.add('is-visible')
+
+            clearTimeout(copyStatusTimeout)
+            copyStatusTimeout = setTimeout(() => {
+              copyButton.classList.remove('is-copied')
+              copyStatus.textContent = ''
+              copyStatus.classList.remove('is-visible')
+            }, 2000)
+          } catch {
+            copyStatus.textContent = 'Не удалось скопировать email'
+            copyStatus.classList.add('is-visible')
+          }
+        })
+
+        printButton.addEventListener('click', () => window.print())
       </script>
     </body>
 </html>
