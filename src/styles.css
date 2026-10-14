@@ -56,6 +56,7 @@ body {
 
 .resume__contacts {
   padding: 20px 0;
+  border-bottom: 1px solid rgba(35, 30, 39, .1);
 }
 
 .resume__contacts-name {
@@ -225,22 +226,25 @@ body {
 }
 
 .resume a {
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: .2em;
 }
 
-.resume a[target="_blank"]::after {
-  content: url('./assets/icons/link.svg');
-  display: inline-block;
+.resume__external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35em;
+}
+
+.resume__external-link img {
   width: .8em;
   height: .8em;
-  margin-left: .35em;
   opacity: .5;
-  vertical-align: -.05em;
 }
 
 .resume a:hover {
+  text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
