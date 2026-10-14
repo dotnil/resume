@@ -54,6 +54,15 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
+html.js .resume {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+html.js .resume.is-ready {
+  opacity: 1;
+}
+
 .resume__contacts {
   padding: 20px 0;
   border-bottom: 1px solid rgba(35, 30, 39, .1);
@@ -248,38 +257,68 @@ body {
   text-decoration-thickness: 2px;
 }
 
+.resume a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 .resume__projects-link:hover {
   opacity: .6;
 }
 
 /* Анимация появления */
-.resume__contacts,
-.resume__summary,
-.resume__projects {
+html.js .resume__contacts,
+html.js .resume__summary,
+html.js .resume__featured,
+html.js .resume__projects {
   opacity: 0;
+}
+
+html.js .resume.is-ready .resume__contacts,
+html.js .resume.is-ready .resume__summary,
+html.js .resume.is-ready .resume__featured,
+html.js .resume.is-ready .resume__projects {
   animation: fadeIn 0.8s ease forwards;
 }
 
-.resume__contacts {
+html.js .resume.is-ready .resume__contacts {
   animation-delay: 0.1s;
 }
 
-.resume__summary {
+html.js .resume.is-ready .resume__summary {
   animation-delay: 0.3s;
 }
 
-.resume__projects {
+html.js .resume.is-ready .resume__featured {
   animation-delay: 0.5s;
+}
+
+html.js .resume.is-ready .resume__projects {
+  animation-delay: 0.7s;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .resume {
+    transition: none;
+  }
+
+  html.js .resume.is-ready .resume__contacts,
+  html.js .resume.is-ready .resume__summary,
+  html.js .resume.is-ready .resume__featured,
+  html.js .resume.is-ready .resume__projects {
+    animation: none;
+    opacity: 1;
   }
 }
 
