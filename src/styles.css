@@ -133,15 +133,11 @@ html.js .resume.is-ready {
   border-radius: 6px;
 }
 
-.resume__copy-button svg,
-.resume__print-button svg {
+.resume__copy-button img,
+.resume__print-button img {
   width: 18px;
   height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.7;
+  opacity: .7;
 }
 
 .resume__copy-button:hover,
@@ -184,15 +180,6 @@ html.js .resume.is-ready {
 .resume__print-button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
-}
-
-.resume__summary {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 100;
-  line-height: 1.8;
-  padding: 20px 0;
-  border-top: 1px solid rgba(35, 30, 39, 0.1);
-  border-bottom: 1px solid rgba(35, 30, 39, 0.1);
 }
 
 /* Featured project */
@@ -284,7 +271,7 @@ html.js .resume.is-ready {
 
 .resume__projects-item {
   padding: 18px 0;
-  border-bottom: 1px solid rgba(35,30,39,.08);
+  border-bottom: 1px solid rgba(35, 30, 39, .08);
 }
 
 .resume__projects-item:last-child {
@@ -341,14 +328,12 @@ html.js .resume.is-ready {
 
 /* Анимация появления */
 html.js .resume__contacts,
-html.js .resume__summary,
 html.js .resume__featured,
 html.js .resume__projects {
   opacity: 0;
 }
 
 html.js .resume.is-ready .resume__contacts,
-html.js .resume.is-ready .resume__summary,
 html.js .resume.is-ready .resume__featured,
 html.js .resume.is-ready .resume__projects {
   animation: fadeIn 0.8s ease forwards;
@@ -358,16 +343,12 @@ html.js .resume.is-ready .resume__contacts {
   animation-delay: 0.1s;
 }
 
-html.js .resume.is-ready .resume__summary {
+html.js .resume.is-ready .resume__featured {
   animation-delay: 0.3s;
 }
 
-html.js .resume.is-ready .resume__featured {
-  animation-delay: 0.5s;
-}
-
 html.js .resume.is-ready .resume__projects {
-  animation-delay: 0.7s;
+  animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
@@ -387,7 +368,6 @@ html.js .resume.is-ready .resume__projects {
   }
 
   html.js .resume.is-ready .resume__contacts,
-  html.js .resume.is-ready .resume__summary,
   html.js .resume.is-ready .resume__featured,
   html.js .resume.is-ready .resume__projects {
     animation: none;
@@ -396,7 +376,6 @@ html.js .resume.is-ready .resume__projects {
 }
 
 @media (max-width: 700px) {
-
   .resume {
     padding: 24px;
   }
@@ -415,7 +394,6 @@ html.js .resume.is-ready .resume__projects {
     flex-direction: column;
     gap: 12px;
   }
-
 }
 
 @media print {
@@ -423,13 +401,25 @@ html.js .resume.is-ready .resume__projects {
     background: white !important;
   }
   .resume {
+    opacity: 1 !important;
+    transition: none !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
     background: white !important;
   }
+
+  .resume__contacts,
+  .resume__featured,
+  .resume__projects {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
   .resume__projects-link:hover {
     transform: none !important;
   }
+
   .resume__copy-button,
   .resume__print-button {
     display: none !important;

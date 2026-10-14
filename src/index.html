@@ -3,134 +3,95 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Kholopova Tatiana — JavaScript Developer</title>
-
     <meta
-    name="description"
-    content="JavaScript Developer. Vue 3, Node.js, Hono, PostgreSQL."
+      name="description"
+      content="JavaScript Developer. Vue 3, Node.js, Hono, PostgreSQL."
     >
-
     <meta property="og:title" content="Kholopova Tatiana — JavaScript Developer">
     <meta property="og:type" content="website">
-
     <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="./styles.css">
   </head>
 
-    <body>
+  <body>
+    <div class="resume">
+      <header class="resume__contacts">
+        <h1 class="resume__contacts-name">Kholopova Tatiana</h1>
+        <p class="resume__contacts-title">JavaScript Developer</p>
+        <p class="resume__contacts-location">
+          Москва · удалённо / гибрид · без переезда
+        </p>
 
-      <div class="resume">
-
-        <header class="resume__contacts">
-
-          <button
-            class="resume__print-button"
-            type="button"
-            >
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z" />
-            </svg>
-            Печать / PDF
-          </button>
-
-          <h1 class="resume__contacts-name">
-            Kholopova Tatiana
-          </h1>
-
-          <p class="resume__contacts-title">
-            JavaScript Developer
-          </p>
-
-          <p class="resume__contacts-location">
-            Москва · удалённо / гибрид · без переезда
-          </p>
-
-          <p class="resume__contacts-link">
+        <p class="resume__contacts-link">
           <img
-          class="resume__contacts-icon"
-          src="./assets/icons/logo-github.svg"
-          alt=""
+            class="resume__contacts-icon"
+            src="./assets/icons/logo-github.svg"
+            alt=""
           >
-
           <a
             href="https://github.com/dotnil"
             target="_blank"
             rel="noopener noreferrer"
-            >
+          >
             github.com/dotnil
           </a>
-          </p>
+        </p>
 
-          <p class="resume__contacts-link">
+        <p class="resume__contacts-link">
           <img
-          class="resume__contacts-icon"
-          src="./assets/icons/envelope.svg"
-          alt=""
+            class="resume__contacts-icon"
+            src="./assets/icons/envelope.svg"
+            alt=""
           >
-
-          <a href="mailto:tskh.work@gmail.com">
-            tskh.work@gmail.com
-          </a>
-
+          <a href="mailto:tskh.work@gmail.com">tskh.work@gmail.com</a>
           <button
             class="resume__copy-button"
             type="button"
             aria-label="Скопировать email"
             title="Скопировать email"
-            >
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <rect x="9" y="9" width="11" height="11" rx="1" />
-              <path d="M15 9V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h4" />
-            </svg>
+          >
+            <img src="./assets/icons/copy.svg" alt="">
           </button>
           <span class="resume__copy-status" aria-live="polite"></span>
-          </p>
+        </p>
 
-          <p class="resume__contacts-link">
+        <p class="resume__contacts-link">
           <img
-          class="resume__contacts-icon"
-          src="./assets/icons/logo-telegram.svg"
-          alt=""
+            class="resume__contacts-icon"
+            src="./assets/icons/logo-telegram.svg"
+            alt=""
           >
-
           <a
             href="https://t.me/satanyusha"
             target="_blank"
             rel="noopener noreferrer"
-            >
+          >
             @satanyusha
           </a>
-          </p>
+        </p>
 
-        </header>
+        <button class="resume__print-button" type="button">
+          <img src="./assets/icons/print.svg" alt="">
+          Печать / PDF
+        </button>
+      </header>
 
-        <section class="resume__featured">
-
-          <h2 class="resume__featured-title">
-            Ключевой проект
-          </h2>
-
-          <div class="resume__featured-content">
-
-            <img
+      <section class="resume__featured">
+        <h2 class="resume__featured-title">Ключевой проект</h2>
+        <div class="resume__featured-content">
+          <img
             class="resume__featured-image"
             src="./assets/img/hibi-preview-mob.png"
             alt="Превью приложения Hibi"
-            >
-
-            <div class="resume__featured-info">
-
-              <h3 class="resume__featured-name">
-                Hibi
-              </h3>
-
+          >
+          <div class="resume__featured-info">
+            <h3 class="resume__featured-name">Hibi</h3>
             <p class="resume__featured-description">
-            Fullstack-приложение для отслеживания привычек. Пользователь создаёт
-            привычки, задаёт цели и отмечает выполнение; прогресс по каждой привычке
-            виден прямо в общем списке.
+              Fullstack-приложение для отслеживания привычек. Пользователь создаёт
+              привычки, задаёт цели и отмечает выполнение; прогресс по каждой привычке
+              виден прямо в общем списке.
             </p>
-
             <ul class="resume__featured-stack">
               <li>JavaScript</li>
               <li>Node.js</li>
@@ -142,15 +103,11 @@
               <li>dbmate</li>
               <li>NixOS</li>
             </ul>
-
             <p class="resume__featured-description">
-            Hibi — самостоятельный fullstack-проект: Vue 3 frontend, REST API на Hono, PostgreSQL без ORM, авторизация через JWT в HttpOnly cookie и production-деплой на VPS с NixOS.
+              Hibi — самостоятельный fullstack-проект: Vue 3 frontend, REST API на Hono, PostgreSQL без ORM, авторизация через JWT в HttpOnly cookie и production-деплой на VPS с NixOS.
             </p>
 
-            <h4 class="resume__featured-subtitle">
-              Технические решения
-            </h4>
-
+            <h4 class="resume__featured-subtitle">Технические решения</h4>
             <ul class="resume__featured-description">
               <li>frontend и backend разделены на независимые приложения и взаимодействуют через REST API;</li>
               <li>PostgreSQL используется без ORM, SQL сосредоточен в backend-модулях;</li>
@@ -158,14 +115,13 @@
             </ul>
 
             <div class="resume__featured-links">
-
               <span class="resume__external-link">
                 <img src="./assets/icons/link.svg" alt="">
                 <a
                   href="https://hibiflow.ru/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >
+                >
                   Демо
                 </a>
               </span>
@@ -176,7 +132,7 @@
                   href="https://github.com/dotnil/hibi-vue"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >
+                >
                   Frontend
                 </a>
               </span>
@@ -187,215 +143,154 @@
                   href="https://github.com/dotnil/hibi-hono"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >
+                >
                   Backend
                 </a>
               </span>
-
             </div>
-
-            </div>
-
           </div>
+        </div>
+      </section>
 
-        </section>
-
-        <section class="resume__projects">
-
-          <h2 class="resume__projects-title">
-            Другие проекты
-          </h2>
-
-          <article class="resume__projects-item">
-
-            <h3 class="resume__projects-name">
-              Todo Vue
-            </h3>
-
-            <p class="resume__projects-description">
+      <section class="resume__projects">
+        <h2 class="resume__projects-title">Другие проекты</h2>
+        <article class="resume__projects-item">
+          <h3 class="resume__projects-name">Todo Vue</h3>
+          <p class="resume__projects-description">
             Приложение для управления задачами на Vue 3. Реализовала пользовательский drag&drop без сторонних библиотек: обработка Pointer Events, overlay перетаскиваемой карточки и расчёт целевой позиции. Логика перестановки и расчёта позиции покрыты unit-тестами.
-            </p>
+          </p>
 
-            <p class="resume__projects-stack">
-            Vue 3, Vite, Vitest, Vue Test Utils
-            </p>
+          <p class="resume__projects-stack">Vue 3, Vite, Vitest, Vue Test Utils</p>
+          <span class="resume__external-link">
+            <img src="./assets/icons/link.svg" alt="">
+            <a
+              class="resume__projects-link"
+              href="https://github.com/dotnil/todo-vue"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </span>
+        </article>
 
-            <span class="resume__external-link">
-              <img src="./assets/icons/link.svg" alt="">
-              <a
-                class="resume__projects-link"
-                href="https://github.com/dotnil/todo-vue"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                GitHub
-              </a>
-            </span>
-
-          </article>
-
-          <article class="resume__projects-item">
-
-            <h3 class="resume__projects-name">
-              Market Vue
-            </h3>
-
-            <p class="resume__projects-description">
+        <article class="resume__projects-item">
+          <h3 class="resume__projects-name">Market Vue</h3>
+          <p class="resume__projects-description">
             B2B-платформа с ролями vendor и retailer. Работала над функциональностью vendor в команде из трёх разработчиков.
-            </p>
-
-            <p class="resume__projects-workflow">
+          </p>
+          <p class="resume__projects-workflow">
             Командная разработка · Git · feature branches · pull requests · code review
-            </p>
+          </p>
+          <span class="resume__external-link">
+            <img src="./assets/icons/link.svg" alt="">
+            <a
+              class="resume__projects-link"
+              href="https://github.com/rusty-cluster/market-vue"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </span>
+        </article>
 
-            <span class="resume__external-link">
-              <img src="./assets/icons/link.svg" alt="">
-              <a
-                class="resume__projects-link"
-                href="https://github.com/rusty-cluster/market-vue"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                GitHub
-              </a>
-            </span>
+        <article class="resume__projects-item">
+          <h3 class="resume__projects-name">RSS Aggregator</h3>
+          <p class="resume__projects-description">SPA для чтения и автоматического обновления RSS-лент.</p>
+          <p class="resume__projects-stack">JavaScript, Axios, i18next, Yup, Bootstrap, Vite.</p>
+          <p class="resume__projects-description">Учебный проект Hexlet.</p>
+          <span class="resume__external-link">
+            <img src="./assets/icons/link.svg" alt="">
+            <a
+              class="resume__projects-link"
+              href="https://github.com/dotnil/frontend-project-11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </span>
+        </article>
 
-          </article>
+        <article class="resume__projects-item">
+          <h3 class="resume__projects-name">Difference Calculator</h3>
+          <p class="resume__projects-description">CLI-приложение для сравнения JSON и YAML файлов.</p>
+          <p class="resume__projects-stack">Node.js.</p>
+          <p class="resume__projects-description">Учебный проект Hexlet.</p>
+          <span class="resume__external-link">
+            <img src="./assets/icons/link.svg" alt="">
+            <a
+              class="resume__projects-link"
+              href="https://github.com/dotnil/frontend-project-46"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </span>
+        </article>
+      </section>
 
-          <article class="resume__projects-item">
-
-            <h3 class="resume__projects-name">
-              RSS Aggregator
-            </h3>
-
-            <p class="resume__projects-description">
-            SPA для чтения и автоматического обновления RSS-лент.
-            </p>
-
-            <p class="resume__projects-stack">
-            JavaScript, Axios, i18next, Yup, Bootstrap, Vite.
-            </p>
-
-            <p class="resume__projects-description">
-            Учебный проект Hexlet.
-            </p>
-
-            <span class="resume__external-link">
-              <img src="./assets/icons/link.svg" alt="">
-              <a
-                class="resume__projects-link"
-                href="https://github.com/dotnil/frontend-project-11"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                GitHub
-              </a>
-            </span>
-
-          </article>
-
-          <article class="resume__projects-item">
-
-            <h3 class="resume__projects-name">
-              Difference Calculator
-            </h3>
-
-            <p class="resume__projects-description">
-            CLI-приложение для сравнения JSON и YAML файлов.
-            </p>
-
-            <p class="resume__projects-stack">
-            Node.js.
-            </p>
-
-            <p class="resume__projects-description">
-            Учебный проект Hexlet.
-            </p>
-
-            <span class="resume__external-link">
-              <img src="./assets/icons/link.svg" alt="">
-              <a
-                class="resume__projects-link"
-                href="https://github.com/dotnil/frontend-project-46"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                GitHub
-              </a>
-            </span>
-
-          </article>
-
-        </section>
-
-        <section class="resume__projects">
-
-          <h2 class="resume__projects-title">
-            Open Source
-          </h2>
-
-          <article class="resume__projects-item">
-
-            <h3 class="resume__projects-name">
-              Calculus Made Easy
-            </h3>
-
-            <p class="resume__projects-description">
+      <section class="resume__projects">
+        <h2 class="resume__projects-title">Open Source</h2>
+        <article class="resume__projects-item">
+          <h3 class="resume__projects-name">Calculus Made Easy</h3>
+          <p class="resume__projects-description">
             Русский перевод книги Silvanus P. Thompson "Calculus Made Easy" в Markdown с математическими формулами.
-            </p>
+          </p>
+          <span class="resume__external-link">
+            <img src="./assets/icons/link.svg" alt="">
+            <a
+              class="resume__projects-link"
+              href="https://github.com/dotnil/calculus-made-easy-ru"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </span>
+        </article>
+      </section>
+    </div>
 
-            <span class="resume__external-link">
-              <img src="./assets/icons/link.svg" alt="">
-              <a
-                class="resume__projects-link"
-                href="https://github.com/dotnil/calculus-made-easy-ru"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                GitHub
-              </a>
-            </span>
+    <script>
+      const resume = document.querySelector('.resume')
+      const pageLoaded = new Promise((resolve) => window.addEventListener('load', resolve, { once: true }))
+      const fontsLoaded = document.fonts?.ready ?? Promise.resolve()
+      const timeout = new Promise((resolve) => setTimeout(resolve, 1500))
+      const copyButton = document.querySelector('.resume__copy-button')
+      const copyStatus = document.querySelector('.resume__copy-status')
+      const printButton = document.querySelector('.resume__print-button')
+      let copyStatusTimeout
 
-          </article>
+      const showCopyStatus = (message) => {
+        clearTimeout(copyStatusTimeout)
+        copyStatus.textContent = message
+        copyStatus.classList.add('is-visible')
 
-        </section>
+        copyStatusTimeout = setTimeout(() => {
+          copyButton.classList.remove('is-copied')
+          copyStatus.textContent = ''
+          copyStatus.classList.remove('is-visible')
+        }, 2000)
+      }
 
-      </div>
+      Promise.race([Promise.all([pageLoaded, fontsLoaded]), timeout]).then(() => {
+        resume.classList.add('is-ready')
+      })
 
-      <script>
-        const resume = document.querySelector('.resume')
-        const pageLoaded = new Promise((resolve) => window.addEventListener('load', resolve, { once: true }))
-        const fontsLoaded = document.fonts?.ready ?? Promise.resolve()
-        const timeout = new Promise((resolve) => setTimeout(resolve, 1500))
-        const copyButton = document.querySelector('.resume__copy-button')
-        const copyStatus = document.querySelector('.resume__copy-status')
-        const printButton = document.querySelector('.resume__print-button')
-        let copyStatusTimeout
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('tskh.work@gmail.com')
+          copyButton.classList.add('is-copied')
+          showCopyStatus('Скопировано =)')
+        } catch {
+          showCopyStatus('Не удалось скопировать email')
+        }
+      })
 
-        Promise.race([Promise.all([pageLoaded, fontsLoaded]), timeout]).then(() => {
-          resume.classList.add('is-ready')
-        })
-
-        copyButton.addEventListener('click', async () => {
-          try {
-            await navigator.clipboard.writeText('tskh.work@gmail.com')
-            copyButton.classList.add('is-copied')
-            copyStatus.textContent = 'Скопировано =)'
-            copyStatus.classList.add('is-visible')
-
-            clearTimeout(copyStatusTimeout)
-            copyStatusTimeout = setTimeout(() => {
-              copyButton.classList.remove('is-copied')
-              copyStatus.textContent = ''
-              copyStatus.classList.remove('is-visible')
-            }, 2000)
-          } catch {
-            copyStatus.textContent = 'Не удалось скопировать email'
-            copyStatus.classList.add('is-visible')
-          }
-        })
-
-        printButton.addEventListener('click', () => window.print())
-      </script>
-    </body>
+      printButton.addEventListener('click', () => window.print())
+    </script>
+  </body>
 </html>
